@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="add_child_fragment">Add Child Fragment</string>
+    <string name="this_is_fragment_a">This is Fragment A</string>
+    <string name="this_is_fragment_b">This is Fragment B</string>
+    <string name="go_back_fragment_a">Go Back Fragment A</string>
+    <string name="go_back_to_parent">Go Back to Parent</string>
+    <string name="this_is_child_fragment">This is Child Fragment</string>
+    <string name="goto_parent_fragment">GoTo Parent Fragment</string>
+    <string name="goto_fragment_b">Goto Fragment B</string>
+</resources>
