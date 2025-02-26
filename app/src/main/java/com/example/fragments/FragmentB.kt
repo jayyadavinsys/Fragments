@@ -7,26 +7,23 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class FragmentB:Fragment() {
-
-    companion object{
-        val TAG=javaClass.name
+class FragmentB : Fragment() {
+    companion object {
+        val TAG = FragmentB::class.java.simpleName
     }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view=inflater.inflate(R.layout.fragment_b, container, false)
-        val btnBack= view.findViewById<Button>(R.id.btn_back)
-        btnBack.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, ParentFragment())
-                .addToBackStack(TAG)
+    ): View {
+        val view = inflater.inflate(R.layout.fragment_b, container, false)
+        val btnBack = view.findViewById<Button>(R.id.btn_back)
 
-                .commit()
+        btnBack.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
         }
+
         return view
     }
 }
